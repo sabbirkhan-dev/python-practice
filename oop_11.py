@@ -31,3 +31,5 @@ print("\nAfter payment:\n")
 # after payment
 print(nathan.status())
 print(roger.status())
+
+
