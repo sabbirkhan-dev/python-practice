@@ -12,13 +12,13 @@ class Student:
         else:
             print("Invaild ID, Try again later")
 
-    def get_name(self):
+    def get_id(self):
         return self.__ID
     
     def set_name(self, name):
             self.name = name
 
-    def get_id(self):
+    def get_name(self):
         return self.name
 
 
@@ -26,6 +26,14 @@ s1 = Student("Amir", 1122)
 print(s1.details())
 
 s2 = Student("Hamza", 9900)
-s2.update_id(8811)
+s2.set_id(8811)
 print(s2.details()) 
+
+s3 = Student("Sumon", "998888")
+s3.set_id(1234)
+
+s3.set_name("Julhas") 
+print(s3.details())
+
+print(s3.get_id())   # only ID
 
