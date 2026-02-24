@@ -15,3 +15,7 @@ s3 = Student("Shovon", 33)
 s4 = Student("Majeda", 44)
 print(Student.count) 
 
+student_list = [s1,s2,s3,s4]
+
+for x in student_list:
+    x.details() 
