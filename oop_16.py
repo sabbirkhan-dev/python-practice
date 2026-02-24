@@ -6,8 +6,15 @@ class BankAccount:
 
     def withdraw(self, amount, pin):
         if self.__check_pin(pin):      # calling private method
-            self.blance -= amount
-            print(f"Withdraw successful blance {self.blance}")
+            if amount > self.blance:
+                print("Insufficient balance")
+            elif amount >= 20000:
+                print("Maximum Aonunt is 20,000 Taka") 
+            elif amount % 5000 != 0:
+                print("You can withdraw only 500 & 1000 notes")
+            else:
+                self.blance -= amount
+                print(f"Withdraw successful blance {self.blance}")
         else:
             print("Wrong password")
 
@@ -17,8 +24,22 @@ class BankAccount:
         else:
             return False
         
+    def check_blance(self, pin):      # check_balance method
+        if self.__check_pin(pin):
+            print(f"Available Blance: {self.blance}")
+        else:
+            print("Wrong Password")
+
+    def deposit(self, amonunt):
+        self.blance += amonunt
+        print(f"Deposit successful Blacnce: {self.blance}")
         
+
+# Example run    
 b1 = BankAccount("Tuhin", 50000, 4625)
+b1.deposit(10000)
 b1.withdraw(3000, 4625) 
 
+b1.check_blance(4625)
 
+b1.withdraw(3232, 4625)
