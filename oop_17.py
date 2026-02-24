@@ -1,5 +1,5 @@
 class Player:
-    team_run = 0
+    team_run = 0        #  Static variable        
     def __init__(self, run):
         self.run = run
 
@@ -22,4 +22,5 @@ Tazim.hit_six()
 Tazim.hit_six()
 print(Tazim.run)
 
-print(f"Team run {Player.team_run}") # Team run
+print(f"Team run {Player.team_run}") # Team run 
+
