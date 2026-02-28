@@ -3,30 +3,30 @@ from abc import ABC, abstractmethod
 
 
 # Class Bank
-class Bank(ABC):   # <-- এখানে ABC বসবে
+class Bank(ABC):   
     """ An abstract bank class
     """
 
     # basicinfo method
-    def basicinfo(self):   # <-- এখানে basicinfo function
+    def basicinfo(self):   
         print("This is a generic bank")
         return "Generic bank: 0"
 
 
     # abstract withdraw method
-    @abstractmethod   # <-- এখানে abstractmethod decorator
+    @abstractmethod  
     def withdraw(self, amount):
-        pass   # <-- empty রাখতে pass
+        pass  
 
 
 # Class Swiss
-class Swiss(Bank):   # <-- এখানে Bank বসবে
+class Swiss(Bank):  
     """ A specific type of bank that derives from class Bank
     """
 
     # constructor
     def __init__(self):
-        self.bal = 1000   # <-- এখানে balance initialize
+        self.bal = 1000   
 
 
     # override basicinfo
