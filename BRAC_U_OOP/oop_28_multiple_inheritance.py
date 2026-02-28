@@ -24,5 +24,6 @@ print(C.mro(), "\n") # check MRO
 c1 = C()
 c1.method1() 
 
-B.method1(c1) # c1 
+# B.method1(c1) # c1 
+
 
